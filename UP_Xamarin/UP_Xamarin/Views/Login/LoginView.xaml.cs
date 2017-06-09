@@ -21,10 +21,5 @@ namespace UP_Xamarin.Views.Login
         {
            await Navigation.PushModalAsync(new ApplyView());
         }
-
-        public async void Password_Clicked_1(object sender, EventArgs e)
-        {
-           await Navigation.PushModalAsync(new Password());
-        }
     }
 }
