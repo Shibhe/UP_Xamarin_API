@@ -23,6 +23,8 @@ namespace UP_Xamarin_API.Models
 
         public System.Data.Entity.DbSet<UP_Xamarin_API.Controllers.StudentLogin> StudentLogins { get; set; }
 
-        public System.Data.Entity.DbSet<UP_Xamarin_API.Models.ChangePassword> ChangePasswords { get; set; }
+        public System.Data.Entity.DbSet<UP_Xamarin_API.Models.SelectCourse> SelectCourses { get; set; }
+
+        public System.Data.Entity.DbSet<UP_Xamarin_API.Models.Subjects> Subjects { get; set; }
     }
 }

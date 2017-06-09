@@ -197,13 +197,17 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ApplicantController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SelectCoursesController.cs" />
     <Compile Include="Controllers\StudentLoginsController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
+    <Compile Include="Models\SelectCourse.cs" />
     <Compile Include="Models\StudentLogin.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Apply.cs" />
+    <Compile Include="Models\Subjects.cs" />
     <Compile Include="Models\UP_XamarinContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

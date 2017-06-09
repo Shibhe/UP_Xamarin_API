@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UP_Xamarin.Views.ChooseCourse.ViewList"
+             xmlns:List="clr-namespace:UP_Xamarin.ModelView">
+
+    <ContentPage.BindingContext>
+        <List:SelectCourseModelView/>
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding CourseList}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <RelativeLayout>
+                        <Label Text="Student Number" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding studentNumber}"/>
+                        <Label Text="Faculty Name" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding courseFacult}"/>
+                        <Label Text="Course Code" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding courseFacult}"/>
+                        <Label Text="Course Name" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding courseName}"/>
+                        <Label Text="Academic Period" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding AcademicPeriod}"/>
+                        <Label Text="Academic Month" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding AcademicMonth}"/>
+                        <Label Text="Pref Number" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding prefer}"/>
+                        <Label Text="Course Availability" TextColor="Black" Margin="2, 2"/>
+                        <Label Text="{Binding courseAvailability}"/>
+                        <Button BackgroundColor="Aqua" Text="Choose Course" Clicked="Button_Clicked"/>
+                    </RelativeLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
