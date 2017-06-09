@@ -15,7 +15,7 @@
                         <AbsoluteLayout>
                             <Label Text="Search for the course you wish to apply for or use the input below" />
                         </AbsoluteLayout>
-                        <SearchBar Placeholder="Search course" x:Name="search" HeightRequest="50" TextChanged="OnSearchBarTextChanged" SearchButtonPressed="OnSearchBarButtonPressed"></SearchBar>
+                        <SearchBar Placeholder="Search course" x:Name="search"  HeightRequest="50" TextChanged="OnSearchBarTextChanged" SearchButtonPressed="OnSearchBarButtonPressed"></SearchBar>
                         <ListView ItemsSource="{Binding CourseList}" x:Name="viewList" ItemSelected="OnItemSelected" RowHeight="60">
                             <ListView.RowHeight>
                                 <OnPlatform x:TypeArguments="x:Int32">
@@ -25,7 +25,10 @@
                             </ListView.RowHeight>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextCell Text="{Binding SName}" />
+                                    <EntryCell Label="Faculty Name" Text="{Binding SelectedCourse.courseFacult, Mode=TwoWay}"  Keyboard="Text"/>
+                                    <EntryCell Label="Course Name" Text="{Binding SelectedCourse.courseName, Mode=TwoWay}" Keyboard="Text"/>
+                                    <EntryCell Label="Academic Period" Text="{Binding SelectedCourse.AcademicPeriod, Mode=TwoWay}" Keyboard="Text"/>
+                                    <EntryCell Label="Pref Number.(1-3),Not allowed to repeat" Text="{Binding SelectedCourse.prefer, Mode=TwoWay}" Keyboard="Text"/>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
