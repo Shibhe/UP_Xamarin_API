@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UP_Xamarin.Views.Application.ApplyView"
+             xmlns:Models="clr-namespace:UP_Xamarin.ModelView">
+    <ContentPage.BindingContext>
+        <Models:ModelView/>
+    </ContentPage.BindingContext>
+    <ContentView>
+        <TableView Intent="Form" BackgroundColor="Bisque">
+            <TableRoot>
+                <TableSection Title="Applicant Information">
+                    <EntryCell Label="Title" Text="{Binding addApplicant.Title, Mode=TwoWay}"  Keyboard="Text"/>
+                    <EntryCell Label="Initials" Text="{Binding addApplicant.Initials, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell Label="Full Names" Text="{Binding addApplicant.FName, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell Label="Surname" Text="{Binding addApplicant.LName, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell Label="Gender"  Text="{Binding addApplicant.Gender, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell Label="ID Number"  Text="{Binding addApplicant.IDNo, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell Label="Marital Status" Text="{Binding addApplicant.mStatus, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell Label="Home Language" Text="{Binding addApplicant.HLanguage, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell  Label="Previous School Name" Text="{Binding addApplicant.PrevSchool, Mode=TwoWay}" Keyboard="Text"/>
+                    <EntryCell  Label="Examination Number" Text="{Binding addApplicant.ExamNum, Mode=TwoWay}" Keyboard="Text"/>
+                </TableSection>
+                <Button Text="Submit" BackgroundColor="Brown"  Command="PostCommand"/>
+                <Button Text="Login" BackgroundColor="Brown"  Clicked="Login_Clicked" />
+            </TableRoot>
+        </TableView>
+    </ContentView>
+</ContentPage>

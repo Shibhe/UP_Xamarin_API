@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UP_Xamarin.Views.Login.LoginView"
+             xmlns:Model="clr-namespace:UP_Xamarin.ModelView">
+
+    <ContentPage.BindingContext>
+        <Model:StudentViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentView>
+        <TableView Intent="Form" BackgroundColor="Bisque">
+            <TableRoot>
+                <TableSection Title="Login Information">
+                    <EntryCell Label="Username" Text="{Binding Username}"  Keyboard="Text"/>
+                    <EntryCell Label="Password" Text="{Binding Password}" Keyboard="Text"/>
+                </TableSection>
+                <Button Text="Login" BackgroundColor="Brown"  Command="LoginCommand"/>
+                <Button Text="Forgot Password" BackgroundColor="Brown"  Clicked="Password_Clicked_1"/>
+                <Button Text="Go to Apply" BackgroundColor="Brown"  Clicked="Apply_Clicked"/>
+            </TableRoot>
+        </TableView>
+    </ContentView>
+</ContentPage>
